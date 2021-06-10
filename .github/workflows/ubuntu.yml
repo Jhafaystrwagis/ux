@@ -11,7 +11,7 @@ jobs:
     - name: Creating User to Login
       run: sudo useradd -m Area69Lab && sudo adduser Area69Lab sudo && echo 'Area69Lab:Area69Lab' | sudo chpasswd
     - name: Installing Desktop Environment (wait for 5 min)
-      run: sudo apt-get -qy update && sudo add-apt-repository ppa:ubuntudde-dev/stable -y && sudo apt-get -qy install ubuntudde-dde
+      run: sudo apt update && sudo apt install ubuntu-desktop
     - name: Installing Xrdp
       run: sudo apt-get -qy install xrdp -y && sudo service xrdp restart
     - name: Installing Ngrok
